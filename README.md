@@ -59,7 +59,7 @@ I analysed the correlations betwwen the created groups and the loan status to fi
 
 ## Model Building
 First, I transformed the categorical variables into dummy variables.
-I also split the data into train and test sets with a test size 20% in both scenario.
+I also split the data into train and test sets with a test size 20%.
 
 I tried three different models:
 * Logistic Regression - Baseline for the model
