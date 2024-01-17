@@ -58,6 +58,14 @@ I analysed the correlations betwwen the created groups and the loan status to fi
 ![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/amount_group_status_plot.png)
 
 ## Model Building
+First, I transformed the categorical variables into dummy variables.
+I also split the data into train and test sets with a test size 20% in both scenario.
+
+I tried three different models:
+* Logistic Regression - Baseline for the model
+* Random Forest Classifier
+* Gradient Boosting Classifier
+
 |      Model      | Right predictions | Wrong predictions | Accuracy |
 |----------------:|------|------|------|
 |Linear Regression| 5153 | 573 | ~90% |
