@@ -39,8 +39,6 @@ I used pd.cut function for grouping. I plotted the groups "distributions" with p
 I analysed the correlations betwwen the created groups and the loan status to find patterns.
 - #### Pivot Table 1:
  - Customer with a default on file means a higher risk.
-- #### Pivot Table 3 & 7:
- - As we can see, the interest rates and loan grades are well determined. Higher interest rate or worse loan grade means higher chance for a default loan status.
 - #### Pivot Table 4:
  - People's loan status more likely be default with lower income. (0-25K (51.4%); 25-50K (~28%))
  - As the income grows the chance for a default loan status decrease.
