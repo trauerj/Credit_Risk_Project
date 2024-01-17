@@ -1,5 +1,5 @@
 # Credit Risk Project: An Overview
-* I [analysed](https://github.com/trauerj/Credit_Risk_Project/blob/main/Credit_Risk_Analysis.ipynb) a credit risk dataset to find patterns which show us the more risky customers.
+* I [analysed](https://github.com/trauerj/Credit_Risk_Project/blob/main/Credit_Risk_Analysis.ipynb) a credit risk dataset to find patterns to identify risky customers.
 * After the analysis I used Logistic Regression (~90% accuracy), Random Forest and GradienBoosting Classifier to predict the loan status.
 ## Code
 * Python 3 (ipykernel)
