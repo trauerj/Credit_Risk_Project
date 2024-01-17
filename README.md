@@ -27,6 +27,12 @@ First I get some general informations about the dataset using .info(); .describe
 I droped the rows with null values.
 I looked for outliers with boxplot, and removed them.
 I used scatter plots to see the correlations.
+
+
+* People's credit history begins at age of 17-26
+![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/hist_length_age_plot.png)
+* People with default on file have a higher loan interest rate in general
+![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/default_on_file_int_rate_plot.png)
 ### Grouping numerical data for further analysis
 I used pd.cut function for grouping. I plotted the groups "distributions" with pie charts.
  * Most of the customers (50.8%) live in a rented property or have a mortgage on the property what they live in (41.2%). Just the 7.7% of the customers own their home.
@@ -39,11 +45,16 @@ I used pd.cut function for grouping. I plotted the groups "distributions" with p
 I analysed the correlations betwwen the created groups and the loan status to find patterns.
 - #### Pivot Table 1:
  - Customer with a default on file means a higher risk.
+ ![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/default_on_file_status_plot.png)
 - #### Pivot Table 4:
  - People's loan status more likely be default with lower income. (0-25K (51.4%); 25-50K (~28%))
  - As the income grows the chance for a default loan status decrease.
+ ![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/income_status_plot.png)
 - #### Pivot Table 5:
  - Interestingly, people with higher income/loan amount ratio, more likely have a default loan status.
  - (Note: There are very few customer with a higher (>40%) income/loan amount ratio, so the representativeness of this tendency/data is not the best (Not representative).)
 - #### Pivot Table 6:
- - A higher loan amount means a higher chance for a default loan status. (10-15K (23%); 15-35K (~32.6%))
+ - A higher loan amount means a higher chance for a default loan status. (10-15K (23%); 15-35K (~32.6%)).
+![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/amount_group_status_plot.png)
+
+## Model Building
