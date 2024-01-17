@@ -58,3 +58,8 @@ I analysed the correlations betwwen the created groups and the loan status to fi
 ![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/amount_group_status_plot.png)
 
 ## Model Building
+|      Model      | Right predictions | Wrong predictions | Accuracy |
+|----------------:|------|------|------|
+|Linear Regression| 5153 | 573 | ~90% |
+|Random Forest    | 4624 | 1102 | ~81% |
+|Gradient Boosting| 4602 | 1124 | ~81% |
