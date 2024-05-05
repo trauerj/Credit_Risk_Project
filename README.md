@@ -79,6 +79,8 @@ After I got the PD values I changed the the acceptance rate (threshold) between 
 
 Acceptence rate: What percentage of loans are accepted to keep the number of defaults in a portfolio low.
 
+If the PD value is higher than the threshold value then the loan is predicted as default -> loan is rejected.
+
 "Optimal threshold": The threshold value where  the accuracy score, the default and nondefault recalls are  maximalized. (Where the three value almost the same.)
 
 I also calculated the bad rate values, the expected loss values and the estimated values of the portfolio.
@@ -100,29 +102,29 @@ Meaning of undersampling strategy: Creat a train dataset which contain same amou
 I used the ROC curve, ROC_AUC score, accuracy score and the recalls parameters to choose the best model.
 
 
-|      Model      | non-default recalls | Default Recalls | Accuracy |
-|----------------:|------|------|------|
-|Linear Regression| 68% | 68% | 68% |
-|Random Forest    | 84% | 83% | 83% |
-|XGBoost| 85% | 84% | 85% |
+|      Model      | non-default recalls | Default Recalls | Accuracy | Optimal threshold |
+|----------------:|------|------|------|----|
+|Linear Regression| 68% | 68% | 68% | 0.26 |
+|Random Forest    | 84% | 83% | 83% | 0.167 |
+|XGBoost| 85% | 84% | 85% | 0.139 |
 
 ![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/ROC_plot.png)
 
 
 With undersampling strategy:
 
-|      Model      | non-default recalls | Default Recalls | Accuracy |
-|----------------:|------|------|------|
-|Linear Regression| 73% | 73% | 73% |
-|Random Forest    | 84% | 83% | 83% |
-|XGBoost| 85% | 84% | 85% |
+|      Model      | non-default recalls | Default Recalls | Accuracy | Optimal threshold |
+|----------------:|------|------|------|----|
+|Linear Regression| 73% | 73% | 73% | 0.537 |
+|Random Forest    | 84% | 83% | 83% | 0.385 |
+|XGBoost| 85% | 84% | 85% | 0.374 |
 
 ![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/ROC_plot_2.png)
 
 Affects of the undersampling strategy:
 - The accuracy and recall parameters of the LogisticRegression model get better. (0.68 -> 0.73)
 - The feature importance of the LogisticRegression model changed. (Higher coef values and more features are important)
-- The "optimal thresholds" values get higher as well as the expected losses for every model.
+- The "optimal threshold" values get higher as well as the expected losses for every model.
 
 With vs without undersampling:
 Expected losses at the optimal thresholds:
