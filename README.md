@@ -85,16 +85,39 @@ Bad rate: Accepted defaults/Total accepted loans
 
 Expected loss = PD * LGD * loan amount
 
-I assumed the Loss given default value is equal to 20% (LGD=0.2), and the Exposure at default value is equal to the loan amount.
+I assumed the Loss given default value is equal to 20% (LGD=0.2), and the Exposure at default (EAD) value is equal to the loan amount.
 
-Estimated value of the portfolio: Sum of the loan amounts minus the expected losses. (SUM(loan amount - expected losses).
+Estimated value of the portfolio: Sum of the loan amounts minus the expected losses. (SUM(loan amount - expected losses). For this calculation I assumed the bank gets the whole amount from every non-default customer within a specific time interval (For example 1 year). Because of that assumption, the portfolio value is much higher than the expected loss value. Based on that I prefered the expected loss value as a metric instead of the estimated value.
 
+
+### Dealing with class inbalance
+I used the Undersampling strategy to deal with the class inbalance in data.
+Meaning of undersampling strategy: Creat a train dataset which contain same amount of (true) non-default loan as (true) default loan.
 
 ### Metrics and scores
 I used the ROC curve, ROC_AUC score, accuracy score and the recalls parameters to choose the best model.
 
-|      Model      | Right predictions | Wrong predictions | Accuracy |
+
+|      Model      | non-default recalls | Default Recalls | Accuracy |
 |----------------:|------|------|------|
-|Linear Regression| 5153 | 573 | ~90% |
-|Random Forest    | 4624 | 1102 | ~81% |
-|XGBoost| 4602 | 1124 | ~81% |
+|Linear Regression| 68% | 68% | 68% |
+|Random Forest    | 84% | 83% | 83% |
+|XGBoost| 85% | 84% | 85% |
+
+
+With undersampling strategy:
+
+|      Model      | non-default recalls | Default Recalls | Accuracy |
+|----------------:|------|------|------|
+|Linear Regression| 73% | 73% | 73% |
+|Random Forest    | 84% | 83% | 83% |
+|XGBoost| 85% | 84% | 85% |
+
+With vs without undersampling:
+Expected losses at the optimal thresholds:
+
+|      Model      | without undersampling | with undersampling | difference |
+|----------------:|------|------|------|
+|Linear Regression| 726627.04 | ~ 1811396.52 | ~ 1084769.48 |
+|Random Forest    |  416903.96 | ~ 1237786.73 | ~  820882.77 |
+|XGBoost| 337630.86 | ~ 946060.04 | 608429.18 |
