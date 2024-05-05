@@ -1,6 +1,6 @@
 # Credit Risk Project: An Overview
-* I [analysed](https://github.com/trauerj/Credit_Risk_Project/blob/main/Credit_Risk_Analysis.ipynb) a credit risk dataset to find patterns to identify risky customers.
-* After the analysis I built models to predict the values of Probability of default, expected loss and optimal threshold.
+* I [analysed](https://github.com/trauerj/Credit_Risk_Project/blob/main/Credit_Risk_Analysis_v1.ipynb) a credit risk dataset to find patterns to identify risky customers.
+* After the analysis I [built models](https://github.com/trauerj/Credit_Risk_Project/blob/main/Credit_Risk_Model_building.ipynb) to predict the values of Probability of default, expected loss and optimal threshold.
 * I used Logistic Regression, Random Forest and XGBClassifier models.
 
 ## Code
