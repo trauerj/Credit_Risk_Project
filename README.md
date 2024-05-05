@@ -1,6 +1,8 @@
 # Credit Risk Project: An Overview
 * I [analysed](https://github.com/trauerj/Credit_Risk_Project/blob/main/Credit_Risk_Analysis.ipynb) a credit risk dataset to find patterns to identify risky customers.
-* After the analysis I used Logistic Regression, Random Forest and XGBClassifier to predict the loan status.
+* After the analysis I built models to predict the values of Probability of default, expected loss and optimal threshold.
+* I used Logistic Regression, Random Forest and XGBClassifier models.
+
 ## Code
 * Python 3 (ipykernel)
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn, plotly
@@ -104,6 +106,8 @@ I used the ROC curve, ROC_AUC score, accuracy score and the recalls parameters t
 |Random Forest    | 84% | 83% | 83% |
 |XGBoost| 85% | 84% | 85% |
 
+![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/ROC_plot.png)
+
 
 With undersampling strategy:
 
@@ -112,6 +116,13 @@ With undersampling strategy:
 |Linear Regression| 73% | 73% | 73% |
 |Random Forest    | 84% | 83% | 83% |
 |XGBoost| 85% | 84% | 85% |
+
+![alt text](https://github.com/trauerj/Credit_Risk_Project/blob/main/Images/ROC_plot_2.png)
+
+Affects of the undersampling strategy:
+- The accuracy and recall parameters of the LogisticRegression model get better. (0.68 -> 0.73)
+- The feature importance of the LogisticRegression model changed. (Higher coef values and more features are important)
+- The "optimal thresholds" values get higher as well as the expected losses for every model.
 
 With vs without undersampling:
 Expected losses at the optimal thresholds:
